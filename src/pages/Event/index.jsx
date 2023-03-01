@@ -6,7 +6,7 @@ import {
   GET_EVENTS_BY_ID,
   UPDATE_EVENTS_BY_ID,
 } from "../../constants/apiEndPoints";
-import { Header, CardDetails } from "../../components";
+import { Header, CardDetails, Footer } from "../../components";
 
 function Event() {
   const [Event, setEvent] = useState();
@@ -46,6 +46,7 @@ function Event() {
         isRegistered={isRegistered}
         regHandler={regHandler}
       />
+      <Footer />
     </div>
   ) : (
     <div>Loading...</div>

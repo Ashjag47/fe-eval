@@ -3,7 +3,7 @@
 /* eslint-disable import/named */
 import React from "react";
 import { useState, useEffect } from "react";
-import { Header, Card, Navbar } from "../../components";
+import { Header, Card, Navbar, Footer } from "../../components";
 import makeRequest from "../../utils/makeRequest";
 import { GET_ALL_EVENTS } from "../../constants/apiEndPoints";
 
@@ -54,6 +54,7 @@ function AllEvents() {
           <Card key={event.id} event={event} />
         ))}
       </div>
+      <Footer />
     </div>
   ) : (
     <div>Loading...</div>
