@@ -1,9 +1,18 @@
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 35px;
-    margin: 20px;
     justify-items: center;
     padding-left: 5%;
     padding-right: 5%;
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 780px) {
+    .card-grid {
+      grid-template-columns: repeat(1, 1fr);
+      margin: auto;
+    }
   }

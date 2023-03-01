@@ -1,0 +1,18 @@
+.bookmark{
+    color: orange;
+    font-size: 30px;
+    padding:2px 7px
+}
+
+.reg-fail{
+    color: #ECECAB;
+    font-size: 20px;
+    padding:2px 7px
+}
+
+
+.reg-success{
+    color: #A0F3AD;
+    font-size: 20px;
+    padding:2px 7px
+}

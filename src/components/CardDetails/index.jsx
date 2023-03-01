@@ -4,9 +4,9 @@
 import React from "react";
 import "./CardDetails.css";
 import { getFormattedDateFromUtcDate } from "../../utils/common";
-import { Button } from "..";
+import { Button, RegBook } from "..";
 
-function CardDetails({ event }) {
+function CardDetails({ event, isRegistered, regHandler }) {
   return (
     <div className="card-body-d" data-testid="event-body">
       <div className="card-img-d">
@@ -24,11 +24,10 @@ function CardDetails({ event }) {
             {getFormattedDateFromUtcDate(event.datetime)}
           </div>
         </div>
-        <div className="card-reg-d">
-          <div className="reg-status-d">reg{event.isRegistered}</div>
-          <div className="bookmark-d">book{event.isBookmarked}</div>
-        </div>
-        <Button event={event} />
+        <RegBook event={event} />
+        {event.areSeatsAvailable && (
+          <Button isRegistered={isRegistered} regHandler={regHandler} />
+        )}
       </div>
     </div>
   );
